@@ -19,9 +19,6 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-	// APawn interface
-	//virtual void SetupPlayerInputComponent(UInputComponent* InputComponent) override;
-
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
@@ -33,7 +30,7 @@ public:
 	TSubclassOf<class AGun> GunBlueprint;
 
 	UFUNCTION(BlueprintCallable, Category = "Weapon")
-	void Fire();
+	void PullTrigger();
 
 private:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
